@@ -1,0 +1,51 @@
+
+   ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  li {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem; /* Space between recipe name and buttons */
+    flex-wrap: wrap; /* Ensures buttons wrap on smaller screens */
+  }
+  
+  li span {
+    flex: 1; /* Pushes buttons to the right */
+  }
+  
+  .buttons-container {
+    display: flex;
+    gap: 0.5rem; /* Space between buttons */
+    flex-wrap: wrap; /* Ensures buttons stack on small screens */
+  }
+  
+  button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    transition: background-color 300ms;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  @media (max-width: 768px) {
+    li {
+      flex-direction: column; /* Stack content vertically */
+      align-items: flex-start;
+    }
+  
+    .buttons-container {
+      justify-content: flex-start; /* Align buttons to the left on mobile */
+      width: 100%; /* Ensure buttons fit the screen */
+    }
+  }
+  

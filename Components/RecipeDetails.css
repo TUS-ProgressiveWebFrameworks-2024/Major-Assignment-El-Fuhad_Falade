@@ -1,0 +1,27 @@
+.card {
+    --border-radius: 1.25rem;
+    --border-width: 0.5rem;
+  
+    position: relative;
+  
+    display: inline-block; /* Adjust to content */
+    padding: 20px;
+  
+    background: black;
+    color: white;
+    border-radius: var(--border-radius);
+  }
+  
+  .card::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+  
+    background: white;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 15px 30px -5px;
+  
+    margin: calc(-1 * var(--border-width));
+    border-radius: calc(var(--border-radius) + var(--border-width));
+  }
+  
